@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Facebook Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Facebook Registration Form</h2>
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" onblur="validateFirstName()"
+                    onfocus="clearError('firstName')">
+                <span class="error" id="firstNameError"></span>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" onblur="validateLastName()"
+                    onfocus="clearError('lastName')">
+                <span class="error" id="lastNameError"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" onblur="validateEmail()" onfocus="clearError('email')">
+                <span class="error" id="emailError"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" onblur="validatePassword()"
+                    onfocus="clearError('password')">
+                <span class="error" id="passwordError"></span>
+            </div>
+            <div class="form-group">
+                <label for="birthDate">Birthdate:</label>
+                <input type="date" id="birthDate" name="birthDate" onblur="validateBirthDate()"
+                    onfocus="clearError('birthDate')">
+                <span class="error" id="birthDateError"></span>
+            </div>
+            <div class="form-group">
+                <label>Gender:</label>
+                <input type="radio" id="genderMale" name="gender" value="male">
+                <label for="genderMale">Male</label>
+                <input type="radio" id="genderFemale" name="gender" value="female">
+                <label for="genderFemale">Female</label>
+                <span class="error" id="genderError"></span>
+            </div>
+            <div class="form-group">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
